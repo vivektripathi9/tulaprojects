@@ -1,0 +1,67 @@
+@import url("./fonts.css");
+
+/* Tula heading typography (Figma: Gilda Display 400 / 40px / 56.25px / 0% / uppercase / center) */
+:root {
+  --heading-font-size: 32px;
+  --heading-line-height: 45px;
+  --heading-letter-spacing: 0;
+  --heading-text-transform: uppercase;
+}
+
+.gilda-display-regular,
+.page-title,
+.section-title,
+.section-title-big,
+.tula-properties-about-title,
+.soil-heading h3,
+.tula-testimonial-heading,
+.blogs-title,
+.disclaimer-section-title,
+.soil-about-title,
+.channel-section h2,
+.register-section h2,
+.why-title,
+.career-header h2,
+.smart-move-section h2,
+.about-title,
+.our-project-heading,
+.nature-main-title,
+.nature-bottom-content h2,
+.masterplan-title,
+.location-advantages-title,
+.luxora-gallery-title,
+.resort-content h2,
+.outdoor-content h2,
+.sports-area-header h2,
+.recent-post-heading,
+.blog-details-heading,
+.blog-main-title,
+.privacy-policy-title,
+.design-philosophy-title,
+.philosophy-title,
+.pillar-heading,
+.heading-title,
+h2.project-title {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: var(--heading-text-transform);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --heading-font-size: 28px;
+    --heading-line-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heading-font-size: 25px;
+    --heading-line-height: 35px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "tula-htaccess-root",
+  "private": true,
+  "description": "Forward npm scripts to the Next.js app in next-site/",
+  "scripts": {
+    "dev": "npm run dev --prefix next-site",
+    "dev:reset": "npm run dev:reset --prefix next-site",
+    "dev:turbo": "npm run dev:turbo --prefix next-site",
+    "build": "npm run build --prefix next-site",
+    "build:clean": "npm run build:clean --prefix next-site",
+    "start": "npm run start --prefix next-site",
+    "clean": "npm run clean --prefix next-site",
+    "prepare:legacy": "npm run prepare:legacy --prefix next-site",
+    "lint": "npm run lint --prefix next-site",
+    "preview": "npm run preview --prefix next-site"
+  }
+}

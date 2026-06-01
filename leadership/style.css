@@ -1,0 +1,1236 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(#f8ead6, #f9e3c6);
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Hero Section  */
+
+.hero-section {
+  background-image: url(./Images/leadership-slider-3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* =========================================================
+   LEADERSHIP HERO SLIDER
+========================================================= */
+
+/* .hero-section{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+} */
+
+.leadership-hero-slider{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.leadership-hero-slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+  opacity 1.2s ease,
+  transform 7s ease;
+  transform: scale(1.08);
+}
+
+.leadership-hero-slide.active-slide{
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+  transform: scale(1);
+}
+
+.leadership-hero-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+
+.leadership-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+  linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.35)
+  );
+  z-index: 3;
+}
+
+/* Arrows */
+
+.leadership-hero-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.35s ease;
+}
+
+.leadership-hero-arrow:hover{
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.leadership-hero-prev{
+  left: 35px;
+}
+
+.leadership-hero-next{
+  right: 35px;
+}
+
+/* Dots */
+
+.leadership-hero-dots{
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.leadership-hero-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.leadership-hero-dot.active-dot{
+  width: 34px;
+  border-radius: 30px;
+  background: #ffffff;
+}
+
+/* =========================================================
+ TABLET
+========================================================= */
+
+@media screen and (max-width: 992px){
+
+  .hero-section{
+      height: 75vh;
+  }
+
+  .leadership-hero-arrow{
+      width: 46px;
+      height: 46px;
+      font-size: 20px;
+  }
+
+  .leadership-hero-prev{
+      left: 22px;
+  }
+
+  .leadership-hero-next{
+      right: 22px;
+  }
+
+}
+
+/* =========================================================
+ MOBILE
+========================================================= */
+
+@media screen and (max-width: 768px){
+
+  .hero-section{
+      height: 68vh;
+  }
+
+  .leadership-hero-arrow{
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+  }
+
+  .leadership-hero-prev{
+      left: 14px;
+  }
+
+  .leadership-hero-next{
+      right: 14px;
+  }
+
+  .leadership-hero-dots{
+      bottom: 24px;
+      gap: 10px;
+  }
+
+}
+
+/* =========================================================
+ SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 480px){
+
+  .hero-section{
+      height: 58vh;
+  }
+
+  .leadership-hero-arrow{
+      width: 34px;
+      height: 34px;
+      font-size: 16px;
+  }
+
+  .leadership-hero-dot{
+      width: 8px;
+      height: 8px;
+  }
+
+  .leadership-hero-dot.active-dot{
+      width: 24px;
+  }
+
+}
+
+/* Our Journey  */
+
+.our-journey {
+  width: 100%;
+  padding: 90px 0;
+  background-color: #f8ead6;
+}
+.our-journey-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.our-journey-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.heading-sub-title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 26.25px;
+  letter-spacing: 5px;
+  color: #666666b9;
+  text-transform: uppercase;
+}
+.heading-title {
+  color: #8c5120e3;
+}
+.our-journey-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  line-height: 26px;
+  font-weight: 400;
+  color: #666666;
+  letter-spacing: 1px;
+  text-align: center;
+  max-width: 1120px;
+}
+.our-journey-para span {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9rem;
+  line-height: 26px;
+  font-weight: 400;
+  color: #666666db;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* founder-section  */
+
+.founder-section {
+  padding: 120px 0;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #8c5120, #75441b, #75441b, #8c5120);
+}
+.founder-section-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 0 4rem;
+}
+.founder-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 50px;
+    max-width: 50%;
+}
+.founder-content-wrapper-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+}
+.founder-sub-title{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 26.66px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f9e7d0df;
+}
+.founder-content-wrapper-top h3{
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    color: #f9e7d0e4;
+    text-transform: uppercase;
+}
+.founder-content-wrapper-top p{
+    font-family: "Barlow", sans-serif;
+    font-size: 0.9rem;
+    line-height: 23px;
+    letter-spacing: 2px;
+    text-align: justify;
+    font-weight: 100;
+    color: #f8e7cfd2;
+}
+.founder-btn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12   px;
+    line-height: 14px;
+    font-weight: 400;
+    padding: 15px 25px;
+    max-width: 174px;
+    max-height: 62px;
+    background: transparent;
+    border: 1px solid #F9E7D0;
+    color: #F9E7D0;
+    text-decoration: none;
+}
+.founder-btn:hover {
+    background-color: #F9E7D0;
+    color: #000;
+}
+.founder-image-wrapper{
+    height: 580px;
+    width: 695px;
+}
+.founder-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: #F9E7D0;
+}
+
+/* Our Team  */
+
+.our-team{
+    width: 100%;
+    position: relative;
+    padding: 100px 0;
+}
+.our-team-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 73px;
+}
+.our-team-title-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.our-team-para{
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666d8;
+  text-align: center;
+  line-height: 26px;
+  max-width: 980px;
+}
+.our-team-content-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 42px;
+}
+.our-team-card{
+  width: 382px;
+  height: 637px;
+  position: relative;
+}
+.our-team-card-image-wrapper{
+  height: 421px;
+  width: 100%;
+  z-index: 9;
+}
+.our-team-card-image{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: 9;
+}
+.our-team-card-content-wrapper{
+  background-color: #76441B;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  position: relative;
+  z-index: 12;
+}
+.our-team-card-title{
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #F9E6CC;
+}
+.our-team-card-subtitle{
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 100;
+  color: #f9e5cbcc;
+}
+.our-team-roles{
+ padding: 12px;
+ max-height: 45px;
+ max-width: 216px;
+ background-color: #FFFFFFCC;
+ border: 1px solid #F8E6CD;
+ color: #824B1E;
+ font-family: "Roboto", sans-serif;
+ font-size: 15px;
+ font-weight: 600;
+ position: absolute;
+ top: 20px;
+ left: 20px;
+}
+.color1{
+  background-color: #E5E1E8;
+}
+
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES — LEADERSHIP PAGE
+   Breakpoints: Tablet ≤ 1024px | Mobile ≤ 768px | Small ≤ 480px
+   ============================================================ */
+
+
+/* ─────────────────────────────────────────
+   TABLET  (≤ 1024px)
+───────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+
+  /* --- Hero --- */
+  .hero-section {
+      height: 70vh;
+  }
+
+  /* --- Our Journey --- */
+  .our-journey {
+      padding: 70px 24px;
+  }
+
+  .our-journey-para {
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+  }
+
+  /* --- Founder Section --- */
+  .founder-section {
+      padding: 80px 24px;
+  }
+
+  .founder-section-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 48px;
+  }
+
+  .founder-content-wrapper {
+      max-width: 100%;
+      gap: 36px;
+  }
+
+  .founder-content-wrapper-top h3 {
+      font-size: 34px;
+      line-height: 40px;
+  }
+
+  .founder-content-wrapper-top p {
+      font-size: 18px;
+      line-height: 28px;
+  }
+
+  .founder-image-wrapper {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+  }
+
+  /* --- Our Team --- */
+  .our-team {
+      padding: 80px 24px;
+  }
+
+  .our-team-wrapper {
+      gap: 50px;
+  }
+
+  .our-team-para {
+      font-size: 16px;
+      text-align: center;
+      max-width: 680px;
+  }
+
+  .our-team-content-wrapper {
+      gap: 32px;
+  }
+
+  .our-team-card {
+      width: calc(50% - 16px);
+      height: auto;
+  }
+
+  .our-team-card-image-wrapper {
+      height: 320px;
+  }
+
+  .our-team-card-content-wrapper {
+      padding: 24px;
+  }
+
+  .our-team-card-title {
+      font-size: 20px;
+  }
+
+  .our-team-card-subtitle {
+      font-size: 14px;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+ MOBILE  (≤ 768px)
+───────────────────────────────────────── */
+
+@media (max-width: 768px) {
+
+  /* --- Hero --- */
+  .hero-section {
+      height: 55vh;
+      background-position: center top;
+  }
+
+  /* --- Our Journey --- */
+  .our-journey {
+      padding: 56px 20px;
+  }
+
+  .our-journey-wrapper {
+      gap: 1.2rem;
+  }
+
+  .heading-sub-title {
+      font-size: 12px;
+      line-height: 22px;
+  }
+
+  .our-journey-para {
+      font-size: 15px;
+      line-height: 26px;
+  }
+
+  /* --- Founder Section --- */
+  .founder-section {
+      padding: 60px 20px;
+  }
+
+  .founder-section-wrapper {
+      gap: 36px;
+  }
+
+  .founder-content-wrapper {
+      gap: 28px;
+  }
+
+  .founder-sub-title {
+      font-size: 13px;
+  }
+
+  .founder-content-wrapper-top h3 {
+      font-size: 28px;
+      line-height: 34px;
+  }
+
+  .founder-content-wrapper-top p {
+      font-size: 15px;
+      line-height: 26px;
+  }
+
+  .founder-btn {
+      padding: 18px 28px;
+      font-size: 13px;
+      max-width: 160px;
+      max-height: unset;
+  }
+
+  .founder-image-wrapper {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+  }
+
+  /* --- Our Team --- */
+  .our-team {
+      padding: 60px 20px;
+  }
+
+  .our-team-wrapper {
+      gap: 40px;
+  }
+
+  .our-team-para {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+  }
+
+  .our-team-content-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+  }
+
+  .our-team-card {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+  }
+
+  .our-team-card-image-wrapper {
+      height: 300px;
+  }
+
+  .our-team-card-content-wrapper {
+      padding: 20px;
+      gap: 0.75rem;
+  }
+
+  .our-team-card-title {
+      font-size: 20px;
+  }
+
+  .our-team-card-subtitle {
+      font-size: 14px;
+      line-height: 22px;
+  }
+
+  .our-team-roles {
+      font-size: 13px;
+      padding: 10px 12px;
+      max-width: 200px;
+      max-height: unset;
+      top: 14px;
+      left: 14px;
+  }
+
+  /* --- Footer --- */
+  .footer-main {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 48px 20px;
+  }
+
+  .footer-legal {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+      padding: 16px 20px;
+  }
+
+  .footer-copyright {
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 13px;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+ SMALL MOBILE  (≤ 480px)
+───────────────────────────────────────── */
+
+@media (max-width: 480px) {
+
+  /* --- Hero --- */
+  .hero-section {
+      height: 45vh;
+  }
+
+  /* --- Our Journey --- */
+  .our-journey {
+      padding: 44px 16px;
+  }
+
+  .our-journey-para {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  /* --- Founder Section --- */
+  .founder-section {
+      padding: 48px 16px;
+  }
+
+  .founder-content-wrapper-top h3 {
+      font-size: 24px;
+      line-height: 30px;
+  }
+
+  .founder-content-wrapper-top p {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  .founder-btn {
+      padding: 16px 24px;
+      font-size: 12px;
+      max-width: 148px;
+  }
+
+  /* --- Our Team --- */
+  .our-team {
+      padding: 48px 16px;
+  }
+
+  .our-team-card {
+      max-width: 100%;
+  }
+
+  .our-team-card-image-wrapper {
+      height: 260px;
+  }
+
+  .our-team-card-content-wrapper {
+      padding: 16px;
+  }
+
+  .our-team-card-title {
+      font-size: 18px;
+  }
+
+  .our-team-card-subtitle {
+      font-size: 13px;
+      line-height: 20px;
+  }
+
+  .our-team-roles {
+      font-size: 12px;
+      padding: 8px 10px;
+      max-width: 180px;
+      top: 10px;
+      left: 10px;
+  }
+
+  /* --- Footer --- */
+  .footer-main {
+      padding: 36px 16px;
+      gap: 32px;
+  }
+
+  .footer-legal {
+      font-size: 12px;
+      gap: 10px;
+  }
+
+  .footer-copyright {
+      font-size: 12px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-section {
+      background-image: url("./Images/Leadership-Mob.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 70vh;
+    }
+  }
+
+
+
+
+  /* =========================================================
+   PROFESSIONAL RESPONSIVE SYSTEM
+========================================================= */
+
+
+/* =========================
+   LARGE TABLET
+========================= */
+@media screen and (max-width: 1200px) {
+
+    .main-container{
+      width: 92%;
+      padding: 0 20px;
+    }
+  
+    .founder-section-wrapper{
+      padding: 0;
+      gap: 50px;
+    }
+  
+    .our-team-content-wrapper{
+      gap: 32px;
+    }
+  
+  }
+  
+  
+  /* =========================
+     TABLET
+  ========================= */
+  @media screen and (max-width: 992px) {
+  
+    /* Global */
+    h1,h2,h3{
+      line-height: 1.3 !important;
+    }
+  
+    p{
+      line-height: 1.8 !important;
+    }
+  
+    .main-container{
+      width: 94%;
+      padding: 0 18px;
+    }
+  
+    /* Hero */
+    .hero-section{
+      height: 72vh;
+      background-position: center;
+    }
+  
+    /* Our Journey */
+    .our-journey{
+      padding: 80px 0;
+    }
+  
+    .heading-title{
+      text-align: center;
+    }
+  
+    .our-journey-para{
+      font-size: 16px;
+      line-height: 30px;
+      max-width: 100%;
+    }
+  
+    /* Founder */
+    .founder-section{
+      padding: 90px 0;
+    }
+  
+    .founder-section-wrapper{
+      flex-direction: column;
+      gap: 50px;
+    }
+  
+    .founder-content-wrapper{
+      max-width: 100%;
+      gap: 36px;
+    }
+  
+    .founder-content-wrapper-top h3{
+      font-size: 34px;
+      line-height: 1.3;
+    }
+  
+    .founder-content-wrapper-top p{
+      font-size: 16px;
+      line-height: 30px;
+    }
+  
+    .founder-image-wrapper{
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/3;
+    }
+  
+    .founder-image{
+      object-fit: cover;
+    }
+  
+    /* Team */
+    .our-team{
+      padding: 90px 0;
+    }
+  
+    .our-team-wrapper{
+      gap: 60px;
+    }
+  
+    .our-team-para{
+      font-size: 16px;
+      line-height: 28px;
+    }
+  
+    .our-team-content-wrapper{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 30px;
+    }
+  
+    .our-team-card{
+      width: 100%;
+      height: auto;
+    }
+  
+    .our-team-card-image-wrapper{
+      height: 320px;
+    }
+  
+    .our-team-card-content-wrapper{
+      padding: 24px;
+    }
+  
+    .our-team-card-title{
+      font-size: 22px;
+    }
+  
+    .our-team-card-subtitle{
+      font-size: 14px;
+      line-height: 24px;
+    }
+  
+  }
+  
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  @media screen and (max-width: 768px) {
+  
+    /* Global */
+    .main-container{
+      width: 100%;
+      padding: 0 16px;
+    }
+  
+    h2{
+      font-size: 28px !important;
+      line-height: 1.3 !important;
+    }
+  
+    p{
+      font-size: 15px !important;
+      line-height: 1.8 !important;
+    }
+  
+    section{
+      overflow: hidden;
+    }
+  
+    /* Navbar */
+    .navbar{
+      padding: 14px 18px;
+    }
+  
+    .logo img{
+      width: 95px;
+      height: auto;
+    }
+  
+    .book-btn{
+      font-size: 11px;
+      padding: 10px 16px;
+    }
+  
+    /* Hero */
+    .hero-section{
+      background-image: url("./Images/Leadership-Mob.png");
+      height: 60vh;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    /* Our Journey */
+    .our-journey{
+      padding: 70px 0;
+    }
+  
+    .our-journey-wrapper{
+      gap: 1.2rem;
+    }
+  
+    .heading-sub-title{
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+  
+    .heading-title{
+      text-align: center;
+    }
+  
+    .our-journey-para{
+      font-size: 14px;
+      line-height: 26px;
+      text-align: justify;
+    }
+  
+    /* Founder */
+    .founder-section{
+      padding: 70px 0;
+    }
+  
+    .founder-section-wrapper{
+      gap: 40px;
+    }
+  
+    .founder-content-wrapper{
+      gap: 28px;
+    }
+  
+    .founder-sub-title{
+      font-size: 13px;
+    }
+  
+    .founder-content-wrapper-top h3{
+      font-size: 28px;
+      line-height: 1.4;
+    }
+  
+    .founder-content-wrapper-top p{
+      font-size: 14px;
+      line-height: 26px;
+    }
+  
+    .founder-btn{
+      padding: 14px 24px;
+      font-size: 12px;
+    }
+  
+    .founder-image-wrapper{
+      aspect-ratio: 4/3;
+    }
+  
+    /* Team */
+    .our-team{
+      padding: 70px 0;
+    }
+  
+    .our-team-wrapper{
+      gap: 45px;
+    }
+  
+    .our-team-title-wrapper{
+      gap: 14px;
+    }
+  
+    .our-team-para{
+      font-size: 14px;
+      line-height: 25px;
+    }
+  
+    .our-team-content-wrapper{
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  
+    .our-team-card{
+      max-width: 440px;
+      margin: 0 auto;
+    }
+  
+    .our-team-card-image-wrapper{
+      height: 300px;
+    }
+  
+    .our-team-card-content-wrapper{
+      padding: 20px;
+    }
+  
+    .our-team-card-title{
+      font-size: 20px;
+    }
+  
+    .our-team-card-subtitle{
+      font-size: 13px;
+      line-height: 23px;
+    }
+  
+    .our-team-roles{
+      font-size: 12px;
+      padding: 10px 12px;
+      top: 14px;
+      left: 14px;
+    }
+  
+    /* Footer */
+    .footer-main{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+  
+    .footer-legal{
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      text-align: center;
+    }
+  
+    .footer-copyright{
+      text-align: center;
+      padding: 0 20px;
+    }
+  
+  }
+  
+  
+  /* =========================
+     SMALL MOBILE
+  ========================= */
+  @media screen and (max-width: 480px) {
+  
+    h2{
+      font-size: 22px !important;
+    }
+  
+    p{
+      font-size: 14px !important;
+    }
+  
+    .hero-section{
+      height: 48vh;
+    }
+  
+    .logo img{
+      width: 80px;
+    }
+  
+    .book-btn{
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+  
+    .our-journey,
+    .founder-section,
+    .our-team{
+      padding: 55px 0;
+    }
+  
+    .heading-sub-title{
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+  
+    .our-journey-para{
+      line-height: 24px;
+    }
+  
+    .founder-content-wrapper-top h3{
+      font-size: 22px;
+    }
+  
+    .founder-content-wrapper-top p{
+      font-size: 13px;
+      line-height: 23px;
+    }
+  
+    .founder-btn{
+      padding: 12px 20px;
+      font-size: 11px;
+    }
+  
+    .our-team-card-image-wrapper{
+      height: 250px;
+    }
+  
+    .our-team-card-content-wrapper{
+      padding: 16px;
+    }
+  
+    .our-team-card-title{
+      font-size: 18px;
+    }
+  
+    .our-team-card-subtitle{
+      font-size: 12px;
+      line-height: 21px;
+    }
+  
+    .our-team-roles{
+      font-size: 11px;
+      padding: 8px 10px;
+    }
+  
+    .footer-main{
+      padding: 40px 16px;
+    }
+  
+  }

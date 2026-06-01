@@ -1,0 +1,279 @@
+{
+  "home": {
+    "slug": "home",
+    "source": "index.html",
+    "scripts": [
+      "navbar.js",
+      "script.js",
+      "footer-email.js",
+      "home-inline.js"
+    ],
+    "title": "Best Luxury Real Estate Builders in Bangalore | Tula Properties",
+    "description": "Tula Properties is a luxury real estate builder in Bangalore offering premium farm plots, sustainable communities, and modern residential developments for living and investment.",
+    "stylesheets": [
+      "/style-main.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "contact": {
+    "slug": "contact",
+    "source": "contact/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js",
+      "contact-inline.js"
+    ],
+    "title": "Contact Tula Properties | Get in Touch with Our Real Estate Experts",
+    "description": "Contact Tula Properties for enquiries about luxury farm plots, upcoming residential projects, partnerships, and real estate developments in Bangalore. Connect with our team for more information.",
+    "stylesheets": [
+      "/contact/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "soil": {
+    "slug": "soil",
+    "source": "soil/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "S.O.I.L Philosophy | Sustainable Organic Integrated Living | Tula Properties",
+    "description": "Explore the S.O.I.L philosophy by Tula Properties — Sustainable, Organic, Integrated Living focused on eco-conscious communities, wellness, and meaningful living experiences.",
+    "stylesheets": [
+      "/soil/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "eco-urbanity": {
+    "slug": "eco-urbanity",
+    "source": "eco-urbanity/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Eco Urbanity | Sustainable Community Living in Bangalore | Tula Properties",
+    "description": "Discover Eco Urbanity by Tula Properties - a sustainable living concept that blends nature, community, wellness, and modern urban lifestyles in Bangalore.",
+    "stylesheets": [
+      "/eco-urbanity/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "design-prospects": {
+    "slug": "design-prospects",
+    "source": "design-prospects/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Design Prospects | Thoughtful Sustainable Design Approach | Tula Properties",
+    "description": "Explore the design prospects of Tula Properties focused on sustainable architecture, eco-conscious planning, modern living spaces, and nature-inspired community development.",
+    "stylesheets": [
+      "/design-prospects/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "channel-partners": {
+    "slug": "channel-partners",
+    "source": "channel-partners/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Channel Partners",
+    "description": "",
+    "stylesheets": [
+      "/channel-partners/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "career": {
+    "slug": "career",
+    "source": "career/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js",
+      "career-inline.js"
+    ],
+    "title": "Careers at Tula Properties",
+    "description": "Looking for a career in real estate? Join Tula Properties and be part of a dynamic team driving innovation, sustainability, and excellence in Bangalore’s real estate industry.",
+    "stylesheets": [
+      "/career/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "leadership": {
+    "slug": "leadership",
+    "source": "leadership/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Leadership Team & Our Journey | Tula Properties Bangalore",
+    "description": "Meet the leadership team behind Tula Properties and explore our journey in creating sustainable real estate communities and premium developments in Bangalore.",
+    "stylesheets": [
+      "/leadership/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "projects": {
+    "slug": "projects",
+    "source": "Projects/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "",
+    "description": "",
+    "stylesheets": [
+      "/Projects/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "projects-rhythms-of-earth": {
+    "slug": "projects-rhythms-of-earth",
+    "source": "Projects/rhythms-of-earth.html",
+    "scripts": [
+      "projects-script.js",
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Rhythms of Earth | Luxury Curated Farmland Near Chikkaballapur, Bangalore | Tula Properties",
+    "description": "Discover Rhythms of Earth by Tula Properties, a luxury curated farmland project near Chikkaballapur, Bangalore, offering premium farm plots from 5,500 to 14,000 sq ft.",
+    "stylesheets": [
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap",
+      "/Projects/style.css",
+      "/navbar.css"
+    ]
+  },
+  "blogs": {
+    "slug": "blogs",
+    "source": "blogs/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Real Estate Blogs & Insights | Tula Properties Bangalore",
+    "description": "Explore the latest real estate blogs, sustainable living insights, investment tips, and property trends from Tula Properties in Bangalore.",
+    "stylesheets": [
+      "/blogs/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "blogs-blog1": {
+    "slug": "blogs-blog1",
+    "source": "blogs/blog1.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Blogs",
+    "description": "",
+    "stylesheets": [
+      "/blogs/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "blogs-blogs2": {
+    "slug": "blogs-blogs2",
+    "source": "blogs/blogs2.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Blogs",
+    "description": "",
+    "stylesheets": [
+      "/blogs/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "blogs-blogs3": {
+    "slug": "blogs-blogs3",
+    "source": "blogs/blogs3.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Blogs",
+    "description": "",
+    "stylesheets": [
+      "/blogs/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "privacy-policy": {
+    "slug": "privacy-policy",
+    "source": "privacy-policy/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Privacy Policy | Tula Properties",
+    "description": "Read the Privacy Policy of Tula Properties to learn how we collect, use, protect, and manage your personal information across our website and real estate services.",
+    "stylesheets": [
+      "/privacy-policy/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "disclaimer": {
+    "slug": "disclaimer",
+    "source": "disclaimer/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Disclaimer | Tula Properties",
+    "description": "Read the Disclaimer of Tula Properties for important information regarding website content, project details, marketing materials, and limitations related to our real estate services.",
+    "stylesheets": [
+      "/disclaimer/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  },
+  "terms-and-conditions": {
+    "slug": "terms-and-conditions",
+    "source": "t&c/index.html",
+    "scripts": [
+      "navbar.js",
+      "footer-email.js"
+    ],
+    "title": "Terms & Conditions | Tula Properties",
+    "description": "Read the Terms & Conditions of Tula Properties to understand the guidelines, policies, website usage terms, and important information related to our real estate services and projects.",
+    "stylesheets": [
+      "/terms-and-conditions/style.css",
+      "/navbar.css",
+      "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap",
+      "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
+    ]
+  }
+}

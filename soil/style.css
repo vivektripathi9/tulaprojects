@@ -1,0 +1,390 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(#f8ead6, #f9e3c6);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Hero Section  */
+
+.hero-section {
+    background-image: url('./Images/hero-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Soil about section  */
+
+.soil-about-section{
+    padding: 120px 0;
+    width: 100%;
+    position: relative;
+}
+.soil-about-section-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.soil-about-section-title-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+.soil-about-title {
+    color: #8C5120;
+}
+.soil-about-title-para{
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    color: #666666;
+    max-width: 1000px;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.soil-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.soil-card {
+    width: 100%;
+    min-height: 370px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* =========================
+   CONTENT SIDE
+========================= */
+
+.soil-content {
+    width: 60%;
+    background: #99581f;
+    padding: 56px 95px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #f7e8d7;
+}
+
+/* Rounded Design */
+
+.soil-card .soil-content {
+    border-top-left-radius: 130px;
+}
+.soil-card .soil-image-wrapper {
+    border-bottom-right-radius: 130px;
+}
+
+.reverse-card .soil-content {
+    border-top-right-radius: 130px;
+    border-top-left-radius: 0;
+}
+.reverse-card .soil-image-wrapper{
+    border-bottom-left-radius: 130px;
+    border-bottom-right-radius: 0px;
+}
+/* =========================
+   LETTER
+========================= */
+
+/* .soil-letter {
+    font-size: 200px;
+    line-height: 1;
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 100;
+    color: #f6e6d2;
+    flex-shrink: 0;
+    padding-top: 4.5rem;
+} */
+.soil-letter {
+    font-size: 136px;
+    line-height: 1;
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 100;
+    color: #f6e6d2;
+    flex-shrink: 0;
+    /* padding-top: 4.5rem; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+    text-align: end;
+    margin-top: 0rem;
+}
+/* =========================
+   TEXT CONTENT
+========================= */
+
+.soil-text-content {
+    width: 100%;
+}
+
+.soil-title {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.soil-description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.733);
+    margin-bottom: 0.8rem;
+}
+
+.soil-points {
+    padding-left: 18px;
+}
+
+.soil-points li {
+    line-height: 1.4;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================
+   IMAGE SIDE
+========================= */
+
+.soil-image-wrapper {
+    width: 40%;
+    overflow: hidden;
+}
+
+.soil-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.soil-card:hover .soil-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .soil-content {
+        padding: 40px;
+    }
+
+    .soil-title {
+        font-size: 42px;
+    }
+
+    .soil-letter {
+        font-size: 100px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .soil-card {
+        flex-direction: column;
+    }
+
+    .reverse-card {
+        flex-direction: column-reverse;
+    }
+
+    .soil-content,
+    .soil-image-wrapper {
+        width: 100%;
+    }
+
+    .soil-image-wrapper {
+        height: 350px;
+    }
+
+    .soil-card .soil-content,
+    .reverse-card .soil-content {
+        border-radius: 70px 70px 0 0;
+    }
+
+    .soil-content {
+        padding: 40px 35px;
+    }
+
+    .soil-title {
+        font-size: 40px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .soil-section {
+        padding: 60px 0;
+    }
+
+    .main-container {
+        width: 92%;
+    }
+
+    .soil-wrapper {
+        gap: 40px;
+    }
+
+    .soil-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 35px 25px;
+    }
+
+    .soil-letter {
+        font-size: 90px;
+    }
+
+    .soil-title {
+        font-size: 34px;
+        margin-bottom: 14px;
+    }
+
+    .soil-description {
+        font-size: 14px;
+    }
+
+    .soil-points li {
+        font-size: 13px;
+    }
+
+    .soil-image-wrapper {
+        height: 280px;
+    }
+
+    .soil-card .soil-content,
+    .reverse-card .soil-content {
+        border-radius: 50px 50px 0 0;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .soil-content {
+        padding: 30px 20px;
+    }
+
+    .soil-title {
+        font-size: 30px;
+    }
+
+    .soil-letter {
+        font-size: 70px;
+    }
+
+    .soil-description {
+        line-height: 1.7;
+    }
+
+    .soil-points {
+        padding-left: 16px;
+    }
+
+    .soil-points li {
+        line-height: 1.6;
+    }
+
+    .soil-image-wrapper {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+      background-image: url("./Images/soil-mobile.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 70vh;
+    }
+  }

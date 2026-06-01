@@ -1,0 +1,423 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(#f8ead6, #f9e3c6);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Hero Section  */
+
+.hero-section {
+    background-image: url('./Images/hero-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.design-philosophy-section {
+    width: 100%;
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(180deg, #8C5120 0%, #75441B 35%, #75441B 65%, #8C5120 100%);
+}
+.design-philosophy-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 58px;
+}
+.design-philosophy-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+.design-philosophy-title {
+    color: #f8e7d1f3;
+}
+.design-philosophy-para {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 28px;
+    color: #f8e7d1c5;
+    max-width: 900px;
+    text-align: center;
+}
+.design-philosophy-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+}
+.design-philosophy-ul{
+    font-family: "Barlow", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #F8E6CE;
+}
+.design-philosophy-links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.design-philosophy-image-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1140px;
+    height: 500px;
+    background-image: url(./Images/design-prospects-img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* =========================
+   TAB RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+
+    .design-philosophy-section {
+        padding: 90px 0;
+    }
+
+    .design-philosophy-wrapper {
+        gap: 50px;
+    }
+
+    .design-philosophy-para {
+        font-size: 19px;
+        line-height: 30px;
+        max-width: 90%;
+        padding: 0 20px;
+    }
+
+    .design-philosophy-ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px;
+        padding: 0 20px;
+    }
+
+    .design-philosophy-ul li {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .design-philosophy-image-wrapper {
+        width: 100%;
+        max-width: 900px;
+        height: 450px;
+        border-radius: 24px;
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    .design-philosophy-section {
+        padding: 70px 0;
+    }
+
+    .design-philosophy-wrapper {
+        gap: 40px;
+    }
+
+    .design-philosophy-para {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .design-philosophy-ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .design-philosophy-ul li {
+        font-size: 18px;
+        line-height: 28px;
+        list-style: none;
+    }
+
+    .design-philosophy-image-wrapper {
+        width: 100%;
+        height: 280px;
+        border-radius: 20px;
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+/* philosophy content  */
+
+.philosophy-section{
+    padding: 120px 0 ;
+}
+.philosophy-section-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.philosophy-title-wrapper{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.philosophy-title {
+    color: #824B1E;
+}
+.philosophy-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+}
+.philosophy-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 88px;
+}
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+.philosophy-text-content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.philosophy-text-wrapper{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 686px;
+}
+.philosophy-text-title{
+    font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 56.25px;
+    letter-spacing: 9%;
+    color: #824B1E;
+    text-transform: uppercase;
+    text-align: left;
+}
+.philosophy-text-para{    
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #854d1fd6;
+    max-width: 1000px;
+    text-align: right;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+.text-aln-left{
+    text-align: left !important;
+}
+.philosophy-image-wrapper{
+    width: 722px;
+    height: 420px;
+    background-image: url(./Images/Philosophy-img-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.philosophy-image-1{
+    background-image: url(./Images/Philosophy-img-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.philosophy-image-2{
+    background-image: url(./Images/Philosophy-img-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.philosophy-image-3{
+    background-image: url(./Images/Philosophy-img-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* =========================
+   Tablet Responsive
+========================= */
+@media (max-width: 1024px) {
+
+    .philosophy-section{
+        padding: 90px 0;
+    }
+
+    .philosophy-section-wrapper{
+        gap: 90px;
+    }
+
+    .philosophy-content-wrapper{
+        gap: 70px;
+    }
+
+    .philosophy-content{
+        gap: 40px;
+        align-items: center;
+    }
+
+
+    .philosophy-text-title{
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    .philosophy-text-para{
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .philosophy-image-wrapper{
+        width: 50%;
+        height: 420px;
+    }
+
+    .philosophy-text-wrapper{
+        max-width: 50%;
+    }
+}
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+@media (max-width: 768px) {
+
+    .philosophy-section{
+        padding: 70px 0;
+    }
+
+    .philosophy-section-wrapper{
+        gap: 60px;
+        padding: 0 2rem;
+    }
+
+    .philosophy-content-wrapper{
+        gap: 60px;
+    }
+
+    .philosophy-content{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .flex-reverse{
+        flex-direction: column-reverse;
+    }
+
+    .philosophy-text-content-wrapper{
+        width: 100%;
+    }
+
+    .philosophy-text-wrapper{
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .philosophy-text-title{
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+    }
+
+    .philosophy-text-para{
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .philosophy-image-wrapper{
+        width: 100%;
+        height: 300px;
+        border-radius: 12px;
+    }
+}
+
+
+/* =========================
+   Small Mobile Responsive
+========================= */
+@media (max-width: 480px) {
+
+    .philosophy-section{
+        padding: 50px 0;
+    }
+
+    .philosophy-text-title{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .philosophy-text-para{
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .philosophy-image-wrapper{
+        height: 240px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .hero-section {
+      background-image: url("./Images/Des-Pros-Mobile.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 70vh;
+    }
+  }

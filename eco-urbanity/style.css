@@ -1,0 +1,1321 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(#f8ead6, #f9e3c6);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Hero Section  */
+
+.hero-section {
+    background-image: url('./Images/hero-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+.eco-about-section{
+    padding: 120px 0;
+    position: relative;
+}
+.eco-about-section-wrapper{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eco-para{
+    max-width: 1028px;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 28px;
+    color: #666666dd;
+    text-align: center;
+}
+.eco-urbanity-content-section{
+    padding: 120px 0;
+    position: relative;
+}
+.eco-urbanity-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 0 5rem;
+}
+.brown-bg{
+    background: linear-gradient(180deg, #8C5120 0%, #75441B 35%, #75441B 65%, #8C5120 100%);
+}
+.eco-urbanity-content-flex-wrrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+.row-reverse{
+    flex-direction: row-reverse;
+}
+.eco-urbanity-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+}
+.eco-urbanity-title{
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 27px;
+    font-weight: 100;
+    line-height: 43px;
+    letter-spacing: 4%;
+    color: #f9e8d2d2;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.eco-urbanity-title-brown{
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 43px;
+    letter-spacing: 4%;
+    color: #8C5120;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.eco-urbanity-para{
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 24px;
+    color: #f9e8d2ca;
+    letter-spacing: 1px;
+    max-width: 665px;
+    text-align: justify;
+}
+.eco-urbanity-para-brown{
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 25px;
+    color: #854D1F;
+    max-width: 665px;
+    letter-spacing: 0.8px;
+    text-align: justify;
+}
+.eco-urbanity-image-wrapper{
+    width: 588px;
+    height: 364px;
+}
+.eco-urbanity-image-wrapper-brown{
+    width: 588px;
+    height: 364px;
+    border: 1px solid #623916;
+}
+.eco-urbanity-images{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* =========================
+   PILLAR SECTION
+========================= */
+
+.pillar-section {
+    width: 100%;
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+}
+.main-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.pillar-wrapper {
+    position: relative;
+    min-height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   BACKGROUND SHAPE
+========================= */
+
+.pillar-bg-shape {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(161, 111, 61, 0.08);
+    border-radius: 140px;
+    background:
+        linear-gradient(rgba(161, 111, 61, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(161, 111, 61, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.pillar-heading-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.pillar-line {
+    width: 50px;
+    height: 1px;
+    background: #a96d3c;
+    position: relative;
+}
+
+.pillar-line::before,
+.pillar-line::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #a96d3c;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pillar-line::before {
+    left: -3px;
+}
+
+.pillar-line::after {
+    right: -3px;
+}
+
+.pillar-heading {
+    font-size: 35px;
+    color: #a66a39;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* =========================
+   CENTER LOGO
+========================= */
+
+.pillar-center-logo {
+    position: relative;
+    z-index: 2;
+}
+
+.pillar-logo-shape {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.pillar-logo-shape span {
+    position: absolute;
+    background: #9d5b1f;
+}
+
+/* Shape Design */
+
+.pillar-logo-shape span:nth-child(1) {
+    width: 40px;
+    height: 110px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    border-radius: 0 0 40px 40px;
+}
+
+.pillar-logo-shape span:nth-child(2) {
+    width: 110px;
+    height: 40px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 40px 0 0 40px;
+}
+
+.pillar-logo-shape span:nth-child(3) {
+    width: 40px;
+    height: 110px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 40px 40px 0 0;
+}
+
+.pillar-logo-shape span:nth-child(4) {
+    width: 110px;
+    height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 40px 40px 0;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.pillar-card {
+    position: absolute;
+    width: 270px;
+    text-align: center;
+    color: #6d563f;
+}
+
+.pillar-icon {
+    font-size: 52px;
+    color: #9f6331;
+    margin-bottom: 14px;
+    opacity: 0.9;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    object-fit: contain;
+}
+
+.pillar-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+    font-family: "Cormorant Garamond", serif;
+    color: #222222;
+    font-weight: 100;
+    text-align: left;
+}
+
+.pillar-description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666666ce;
+    text-align: justify;
+}
+
+/* =========================
+   POSITIONING
+========================= */
+
+.pillar-top-left {
+    top: 140px;
+    left: 110px;
+}
+
+.pillar-top-right {
+    top: 140px;
+    right: 110px;
+}
+
+.pillar-bottom-left {
+    bottom: 220px;
+    left: 80px;
+}
+
+.pillar-bottom-center {
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pillar-bottom-right {
+    bottom: 220px;
+    right: 80px;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .pillar-heading {
+        font-size: 36px;
+    }
+
+    .pillar-card {
+        width: 240px;
+    }
+
+    .pillar-top-left {
+        left: 40px;
+    }
+
+    .pillar-top-right {
+        right: 40px;
+    }
+
+    .pillar-bottom-left {
+        left: 20px;
+    }
+
+    .pillar-bottom-right {
+        right: 20px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .pillar-wrapper {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 120px 0 80px;
+    }
+
+    .pillar-heading-wrapper {
+        position: relative;
+        top: unset;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pillar-heading {
+        font-size: 34px;
+    }
+
+    .pillar-center-logo {
+        order: 2;
+    }
+
+    .pillar-logo-shape {
+        width: 180px;
+        height: 180px;
+    }
+
+    .pillar-card {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        top: unset;
+        right: unset;
+        left: unset;
+        bottom: unset;
+        transform: none;
+    }
+
+    .pillar-bottom-center {
+        transform: none;
+    }
+
+    .pillar-bg-shape {
+        border-radius: 80px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .pillar-section {
+        padding: 70px 0;
+    }
+
+    .main-container {
+        width: 92%;
+    }
+
+    .pillar-wrapper {
+        gap: 40px;
+        padding: 90px 20px 60px;
+    }
+
+    .pillar-heading {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .pillar-line {
+        width: 30px;
+    }
+
+    .pillar-logo-shape {
+        width: 140px;
+        height: 140px;
+    }
+
+    .pillar-logo-shape span:nth-child(1),
+    .pillar-logo-shape span:nth-child(3) {
+        width: 28px;
+        height: 70px;
+    }
+
+    .pillar-logo-shape span:nth-child(2),
+    .pillar-logo-shape span:nth-child(4) {
+        width: 70px;
+        height: 28px;
+    }
+
+    .pillar-card {
+        max-width: 100%;
+    }
+
+    .pillar-icon {
+        font-size: 42px;
+    }
+
+    .pillar-title {
+        font-size: 24px;
+    }
+
+    .pillar-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .pillar-bg-shape {
+        border-radius: 50px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .pillar-heading {
+        font-size: 24px;
+    }
+
+    .pillar-wrapper {
+        padding: 80px 15px 50px;
+    }
+
+    .pillar-title {
+        font-size: 22px;
+    }
+
+    .pillar-description {
+        font-size: 12px;
+    }
+
+    .pillar-icon {
+        font-size: 36px;
+    }
+}
+
+
+.pillar-wrapper {
+    position: relative;
+    min-height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Background Image */
+
+.pillar-wrapper::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    background: url("./Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.03;
+
+    z-index: -1; /* IMPORTANT */
+    pointer-events: none;
+}
+
+/* Keep Content Above */
+
+.pillar-heading-wrapper,
+.pillar-center-logo,
+.pillar-card {
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES — ECO-URBANITY PAGE
+   Breakpoints: Tablet ≤ 1024px | Mobile ≤ 768px | Small ≤ 480px
+   ============================================================ */
+
+
+/* ─────────────────────────────────────────
+   TABLET  (≤ 1024px)
+───────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+
+    /* --- About Section --- */
+    .eco-about-section {
+        padding: 80px 24px;
+    }
+
+    .eco-para {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 100%;
+    }
+
+    /* --- Content Sections --- */
+    .eco-urbanity-content-section {
+        padding: 80px 24px;
+    }
+
+    .eco-urbanity-content-wrapper {
+        gap: 4rem;
+    }
+
+    .eco-urbanity-content-flex-wrrapper,
+    .eco-urbanity-content-flex-wrrapper.row-reverse {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: flex-start;
+    }
+
+    .eco-urbanity-text-wrapper {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .eco-urbanity-title,
+    .eco-urbanity-title-brown {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .eco-urbanity-para,
+    .eco-urbanity-para-brown {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 100%;
+    }
+
+    .eco-urbanity-image-wrapper,
+    .eco-urbanity-image-wrapper-brown {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* --- Pillar Section --- */
+    .pillar-section {
+        padding: 70px 24px;
+    }
+
+    .pillar-wrapper {
+        min-height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        padding: 100px 20px 60px;
+    }
+
+    .pillar-heading-wrapper {
+        position: relative;
+        top: unset;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .pillar-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .pillar-center-logo {
+        position: relative;
+        order: -1;
+    }
+
+    .pillar-logo-shape {
+        width: 180px;
+        height: 180px;
+    }
+
+    .pillar-card {
+        position: relative;
+        width: 100%;
+        max-width: 560px;
+        top: unset;
+        right: unset;
+        left: unset;
+        bottom: unset;
+        transform: none;
+    }
+
+    .pillar-bottom-center {
+        transform: none;
+    }
+
+    .pillar-icon {
+        height: 80px;
+    }
+
+    .pillar-title {
+        font-size: 26px;
+    }
+
+    .pillar-description {
+        font-size: 14px;
+    }
+
+    .pillar-bg-shape {
+        border-radius: 80px;
+    }
+}
+
+
+/* ─────────────────────────────────────────
+   MOBILE  (≤ 768px)
+───────────────────────────────────────── */
+
+@media (max-width: 768px) {
+
+    /* --- Hero --- */
+    .hero-section {
+        height: 55vh;
+        background-position: center top;
+    }
+
+    /* --- About Section --- */
+    .eco-about-section {
+        padding: 60px 20px;
+    }
+
+    .eco-para {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    /* --- Content Sections --- */
+    .eco-urbanity-content-section {
+        padding: 60px 20px;
+    }
+
+    .eco-urbanity-content-wrapper {
+        gap: 3rem;
+    }
+
+    .eco-urbanity-content-flex-wrrapper,
+    .eco-urbanity-content-flex-wrrapper.row-reverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .eco-urbanity-title,
+    .eco-urbanity-title-brown {
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 2%;
+    }
+
+    .eco-urbanity-para,
+    .eco-urbanity-para-brown {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .eco-urbanity-image-wrapper,
+    .eco-urbanity-image-wrapper-brown {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* --- Pillar Section --- */
+    .pillar-section {
+        padding: 60px 0;
+    }
+
+    .main-container {
+        width: 92%;
+    }
+
+    .pillar-wrapper {
+        gap: 36px;
+        padding: 80px 16px 50px;
+    }
+
+    .pillar-heading {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .pillar-line {
+        width: 28px;
+    }
+
+    .pillar-logo-shape {
+        width: 140px;
+        height: 140px;
+    }
+
+    .pillar-card {
+        max-width: 100%;
+    }
+
+    .pillar-icon {
+        height: 70px;
+    }
+
+    .pillar-title {
+        font-size: 22px;
+    }
+
+    .pillar-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .pillar-bg-shape {
+        border-radius: 50px;
+    }
+
+    /* --- Footer --- */
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 48px 20px;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+        padding: 16px 20px;
+    }
+
+    .footer-copyright {
+        text-align: center;
+        padding: 16px 20px;
+        font-size: 13px;
+    }
+}
+
+
+/* ─────────────────────────────────────────
+   SMALL MOBILE  (≤ 480px)
+───────────────────────────────────────── */
+
+@media (max-width: 480px) {
+
+    /* --- Hero --- */
+    .hero-section {
+        height: 45vh;
+    }
+
+    /* --- About Section --- */
+    .eco-about-section {
+        padding: 48px 16px;
+    }
+
+    .eco-para {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /* --- Content Sections --- */
+    .eco-urbanity-content-section {
+        padding: 48px 16px;
+    }
+
+    .eco-urbanity-title,
+    .eco-urbanity-title-brown {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .eco-urbanity-para,
+    .eco-urbanity-para-brown {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    /* --- Pillar Section --- */
+    .pillar-heading {
+        font-size: 20px;
+    }
+
+    .pillar-wrapper {
+        padding: 70px 12px 44px;
+        gap: 28px;
+    }
+
+    .pillar-logo-shape {
+        width: 120px;
+        height: 120px;
+    }
+
+    .pillar-icon {
+        height: 60px;
+    }
+
+    .pillar-title {
+        font-size: 20px;
+    }
+
+    .pillar-description {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .pillar-line {
+        width: 22px;
+    }
+
+    .pillar-bg-shape {
+        border-radius: 32px;
+    }
+
+    /* --- Footer --- */
+    .footer-main {
+        padding: 36px 16px;
+        gap: 32px;
+    }
+
+    .footer-legal {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+      background-image: url("./Images/Eco-Urb-Mobile.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 70vh;
+    }
+  }
+
+
+
+
+  /* =========================================================
+   FINAL PROFESSIONAL RESPONSIVE SYSTEM
+========================================================= */
+
+
+/* =========================
+   LARGE TABLET
+========================= */
+@media screen and (max-width: 1200px) {
+
+    .main-container{
+      width: 92%;
+      padding: 0 20px;
+    }
+  
+    .eco-urbanity-content-wrapper{
+      padding: 0;
+    }
+  
+    .eco-urbanity-content-flex-wrrapper{
+      gap: 4rem;
+    }
+  
+    .pillar-wrapper{
+      min-height: auto;
+    }
+  
+  }
+  
+  
+  /* =========================
+     TABLET
+  ========================= */
+  @media screen and (max-width: 992px) {
+  
+    /* Global */
+    h1,h2,h3{
+      line-height: 1.3 !important;
+    }
+  
+    p{
+      line-height: 1.8 !important;
+    }
+  
+    .main-container{
+      width: 94%;
+      padding: 0 18px;
+    }
+  
+    /* Hero */
+    .hero-section{
+      height: 72vh;
+      background-position: center;
+    }
+  
+    /* About */
+    .eco-about-section{
+      padding: 90px 0;
+    }
+  
+    .eco-para{
+      font-size: 16px;
+      line-height: 30px;
+    }
+  
+    /* Content */
+    .eco-urbanity-content-section{
+      padding: 90px 0;
+    }
+  
+    .eco-urbanity-content-flex-wrrapper,
+    .row-reverse{
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .eco-urbanity-text-wrapper{
+      width: 100%;
+      align-items: flex-start;
+    }
+  
+    .eco-urbanity-title,
+    .eco-urbanity-title-brown{
+      font-size: 30px;
+      line-height: 1.4;
+    }
+  
+    .eco-urbanity-para,
+    .eco-urbanity-para-brown{
+      max-width: 100%;
+      font-size: 16px;
+    }
+  
+    .eco-urbanity-image-wrapper,
+    .eco-urbanity-image-wrapper-brown{
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+    }
+  
+    .eco-urbanity-images{
+      object-fit: cover;
+    }
+  
+    /* Pillar */
+    .pillar-section{
+      padding: 80px 0;
+    }
+  
+    .pillar-wrapper{
+      flex-direction: column;
+      gap: 50px;
+      padding: 100px 30px 70px;
+    }
+  
+    .pillar-card{
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+    }
+  
+    .pillar-heading{
+      font-size: 34px;
+    }
+  
+    .pillar-logo-shape{
+      width: 180px;
+      height: 180px;
+    }
+  
+  }
+  
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  @media screen and (max-width: 768px) {
+  
+    /* Global */
+    .main-container{
+      width: 100%;
+      padding: 0 16px;
+    }
+  
+    h2{
+      font-size: 28px !important;
+      line-height: 1.3 !important;
+    }
+  
+    p{
+      font-size: 15px !important;
+      line-height: 1.8 !important;
+    }
+  
+    section{
+      overflow: hidden;
+    }
+  
+    /* Navbar */
+    .navbar{
+      padding: 14px 18px;
+    }
+  
+    .logo img{
+      width: 95px;
+      height: auto;
+    }
+  
+    .book-btn{
+      font-size: 11px;
+      padding: 10px 16px;
+    }
+  
+    /* Hero */
+    .hero-section{
+      background-image: url("./Images/Eco-Urb-Mobile.png");
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    /* About */
+    .eco-about-section{
+      padding: 70px 0;
+    }
+  
+    .eco-para{
+      font-size: 14px;
+      line-height: 26px;
+      text-align: justify;
+    }
+  
+    /* Content */
+    .eco-urbanity-content-section{
+      padding: 70px 0;
+    }
+  
+    .eco-urbanity-content-wrapper{
+      gap: 4rem;
+    }
+  
+    .eco-urbanity-content-flex-wrrapper{
+      gap: 2rem;
+    }
+  
+    .eco-urbanity-title,
+    .eco-urbanity-title-brown{
+      font-size: 24px;
+      line-height: 1.4;
+    }
+  
+    .eco-urbanity-para,
+    .eco-urbanity-para-brown{
+      font-size: 14px;
+      line-height: 25px;
+    }
+  
+    .eco-urbanity-image-wrapper,
+    .eco-urbanity-image-wrapper-brown{
+      aspect-ratio: 4/3;
+    }
+  
+    /* Pillar */
+    .pillar-section{
+      padding: 70px 0;
+    }
+  
+    .pillar-wrapper{
+      padding: 80px 18px 50px;
+      gap: 36px;
+    }
+  
+    .pillar-heading-wrapper{
+      gap: 12px;
+    }
+  
+    .pillar-heading{
+      font-size: 26px;
+    }
+  
+    .pillar-line{
+      width: 28px;
+    }
+  
+    .pillar-logo-shape{
+      width: 140px;
+      height: 140px;
+    }
+  
+    .pillar-card{
+      text-align: left;
+    }
+  
+    .pillar-icon{
+      height: 70px;
+      margin-bottom: 10px;
+    }
+  
+    .pillar-title{
+      font-size: 22px;
+    }
+  
+    .pillar-description{
+      font-size: 13px;
+      line-height: 1.8;
+    }
+  
+    /* Footer */
+    .footer-main{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+  
+    .footer-legal{
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      text-align: center;
+    }
+  
+    .footer-copyright{
+      text-align: center;
+      padding: 0 20px;
+    }
+  
+  }
+  
+  
+  /* =========================
+     SMALL MOBILE
+  ========================= */
+  @media screen and (max-width: 480px) {
+  
+    h2{
+      font-size: 22px !important;
+    }
+  
+    p{
+      font-size: 14px !important;
+    }
+  
+    .hero-section{
+      height: 48vh;
+    }
+  
+    .logo img{
+      width: 80px;
+    }
+  
+    .book-btn{
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+  
+    .eco-about-section,
+    .eco-urbanity-content-section{
+      padding: 55px 0;
+    }
+  
+    .eco-urbanity-title,
+    .eco-urbanity-title-brown{
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  
+    .eco-urbanity-para,
+    .eco-urbanity-para-brown{
+      font-size: 13px;
+      line-height: 23px;
+    }
+  
+    .pillar-wrapper{
+      padding: 70px 12px 45px;
+    }
+  
+    .pillar-heading{
+      font-size: 22px;
+    }
+  
+    .pillar-logo-shape{
+      width: 110px;
+      height: 110px;
+    }
+  
+    .pillar-icon{
+      height: 55px;
+    }
+  
+    .pillar-title{
+      font-size: 20px;
+    }
+  
+    .pillar-description{
+      font-size: 12px;
+      line-height: 1.7;
+    }
+  
+    .footer-main{
+      padding: 40px 16px;
+    }
+  
+  }

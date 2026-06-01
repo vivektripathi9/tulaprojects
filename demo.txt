@@ -1,0 +1,352 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1200;
+    padding: 28px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-center {
+    justify-content: center;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.menu-toggle {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    position: fixed;
+    top: 28px;
+    left: 50px;
+    z-index: 1301;
+    transition: all 0.4s ease;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.menu-toggle:hover span {
+    width: 32px;
+}
+
+.menu-toggle.active {
+    left: calc(25% - 60px);
+}
+
+.menu-toggle.active span {
+    background: #111;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    width: 30px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    width: 30px;
+}
+
+.logo {
+    text-align: center;
+    color: white;
+    line-height: 1.1;
+    user-select: none;
+    z-index: 1201;
+    max-height: 100px;
+    max-width: 180px;
+}
+.center-logo{
+    height: 80px;
+    width: 150px;
+}
+
+.logo-symbol {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-text {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 2px;
+    opacity: 0.95;
+}
+
+.book-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1201;
+}
+
+.book-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.book-btn span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.35s ease;
+}
+
+.book-btn:hover::before {
+    left: 0;
+}
+
+.book-btn:hover span {
+    color: white;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    min-width: 280px;
+    max-width: 420px;
+    height: 100vh;
+    background: white;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 120px 45px 50px;
+    box-shadow: 20px 0 60px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-menu.active {
+    transform: translateX(0);
+    z-index: 1000;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.menu-links a {
+    position: relative;
+    font-size: 28px;
+    color: #111;
+    font-weight: 500;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.menu-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #111;
+    transition: width 0.35s ease;
+}
+
+.menu-links a:hover::after {
+    width: 100%;
+}
+
+.menu-links a:hover {
+    transform: translateX(8px);
+}
+
+.menu-footer {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 50px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 900;
+    backdrop-filter: blur(2px);
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+@media(max-width: 1200px) {
+    .side-menu {
+        width: 35%;
+    }
+
+    .hero-content h1 {
+        font-size: 54px;
+    }
+    .menu-toggle.active {
+        left: calc(35% - 60px);
+    }
+}
+
+@media(max-width: 992px) {
+    .navbar {
+        padding: 24px 28px;
+    }
+
+    .side-menu {
+        width: 45%;
+    }
+
+    .logo-symbol {
+        font-size: 34px;
+    }
+
+    .menu-links a {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar {
+        padding: 20px 18px;
+    }
+
+    .side-menu {
+        width: 75%;
+        min-width: unset;
+        max-width: unset;
+        padding: 110px 28px 40px;
+    }
+
+    .logo-symbol {
+        font-size: 28px;
+    }
+
+    .logo-text {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .book-btn {
+        padding: 10px 16px;
+        font-size: 11px;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+    .menu-toggle {
+        top: 20px;
+        left: 18px;
+    }
+
+    .menu-toggle.active {
+        left: calc(75% - 55px);
+    }
+}
+
+@media(max-width: 480px) {
+    .navbar {
+        padding: 18px 14px;
+    }
+
+    .side-menu {
+        width: 85%;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+    }
+
+    .book-btn {
+        padding: 9px 14px;
+        font-size: 10px;
+    }
+
+    .menu-links a {
+        font-size: 20px;
+    }
+    .menu-toggle {
+        top: 18px;
+        left: 14px;
+    }
+
+    .menu-toggle.active {
+        left: calc(85% - 50px);
+    }
+}
+
+

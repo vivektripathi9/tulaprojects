@@ -1,0 +1,15 @@
+/* Baseline — same warm cream as inner pages before legacy CSS loads */
+html,
+body {
+  max-width: 100%;
+  min-height: 100%;
+  background: linear-gradient(#f8ead6, #f9e3c6);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.legacy-html-root {
+  /* Isolate layout from the shell; avoids extra style recalc leaking upward */
+  isolation: isolate;
+}

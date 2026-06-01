@@ -1,0 +1,34 @@
+{
+  "name": "next-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare:legacy": "node scripts/prepare-legacy.mjs",
+    "clean": "node ./scripts/clean-next.mjs",
+    "ensure-content": "node scripts/ensure-content.mjs",
+    "prebuild": "npm run prepare:legacy",
+    "dev": "npm run ensure-content && next dev",
+    "dev:reset": "npm run clean && npm run ensure-content && next dev",
+    "dev:turbo": "npm run ensure-content && next dev --turbopack",
+    "dev:3050": "npm run ensure-content && next dev -p 3050",
+    "build": "next build",
+    "build:clean": "npm run clean && npm run build",
+    "start": "npx --yes serve@14 out -l 3000",
+    "preview": "npm run build && npm run start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.18"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.18",
+    "@eslint/eslintrc": "^3"
+  }
+}

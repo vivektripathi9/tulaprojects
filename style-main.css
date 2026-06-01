@@ -1,0 +1,1376 @@
+@import url("./headings.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    /* Match inner pages (e.g. contact) — warm cream, not flat white */
+    background: linear-gradient(#f8ead6, #f9e3c6);
+  }
+  main {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+
+.hero-section{
+    width: 100vw;
+}
+
+.hero-video{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+  
+/* Why Choose Us Section — split image vs tint into layers to avoid scroll repaint flicker */
+
+.why-choose-us-section {
+  position: relative;
+  width: 100%;
+  padding: 70px 0;
+  overflow: hidden;
+  isolation: isolate;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: none;
+}
+
+.why-choose-us-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("./Images/overlay-image.jpg") center / cover no-repeat;
+  transform: translateZ(0);
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.why-choose-us-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(140, 81, 32, 0.88) 0%,
+    rgba(117, 68, 27, 0.92) 50%,
+    rgba(140, 81, 32, 0.88) 100%
+  );
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.why-choose-us-section-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 50px;
+}
+  .why-choose-us-card {
+    width: 360px;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  .why-choose-us-card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .why-choose-us-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #ffffff;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .why-choose-us-card-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #ffffff7c;
+    text-align: justify;
+    max-width: 250px;
+  }
+  
+
+
+.tula-properties-about-section{
+  padding: 100px 0;
+  position: relative;
+}
+.tula-properties-about-section-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.tula-properties-about-title-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+.tula-properties-about-subtitle{
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26.25px;
+  color: #666666;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.tula-properties-about-title {
+  color: #8C5120;
+}
+.tula-properties-about-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6rem;
+}
+.tula-properties-about-content-para{
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 4%;
+  color: #666666e9;
+  text-align: justify;
+}
+.tula-properties-about-floating-logo{
+  height: 85px;
+  width: 85px;
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+}
+
+
+
+
+
+   .soil-section {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Top Heading */
+    .soil-heading {
+      /* background: #e8dcc8; */
+      text-align: center;
+      padding: 0 20px 28px 20px;
+    }
+
+    .soil-heading h3 {
+      color: #7c522a;
+      margin-top: 8px;
+    }
+
+    .soil-heading p {
+      font-family: "Gilda Display", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 32px;
+      letter-spacing: 2px;
+      color: #a17249;
+      text-transform: uppercase;
+    }
+
+    /* Cards Wrapper */
+    .soil-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+    }
+
+    .soil-card {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .soil-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .soil-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      transition: 0.4s ease;
+    }
+
+    .soil-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .soil-card:hover::after {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .soil-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      color: #fff;
+      z-index: 999;
+    }
+
+    .soil-letter {
+      font-family: "Gilda Display", serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 90px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .soil-title {
+      font-family: "Gilda Display", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 38px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .soil-description {
+      font-family: "Barlow", sans-serif;
+      font-size: 13.5px;
+      line-height: 1.5;
+      max-width: 300px;
+      color: rgba(255, 255, 255, 0.747);
+    }
+
+    /* Tablet */
+    @media (max-width: 992px) {
+      .soil-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .soil-card {
+        height: 420px;
+      }
+
+      .soil-letter {
+        font-size: 75px;
+      }
+
+      .soil-title {
+        font-size: 34px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .soil-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .soil-card {
+        height: 350px;
+      }
+
+      .soil-heading h3 {
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+
+      .soil-heading p {
+        font-size: 16px;
+      }
+
+      .soil-letter {
+        font-size: 65px;
+      }
+
+      .soil-title {
+        font-size: 30px;
+      }
+
+      .soil-description {
+        font-size: 14px;
+      }
+    }
+
+
+    .soil-overlay-div{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: #2F2121B2;
+      z-index: 99;
+      top: 0;
+      left: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* =========================
+   OUR PROJECT SECTION
+========================= */
+
+.our-project-section {
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Heading */
+
+.our-project-heading-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-project-heading {
+  color: #b07442;
+}
+
+/* Wrapper */
+
+.our-project-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Card */
+
+.project-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 90px 70px 70px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Decorative Box */
+
+.project-design-box {
+  position: absolute;
+  width: 410px;
+  height: 130px;
+  border: 10px solid rgba(0, 0, 0, 0.04);
+  top: 22px;
+  left: 80px;
+  padding: 25px 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 17.6px;
+  letter-spacing: 0%;
+  color: #1F1F1F;
+}
+
+/* .second-box {
+  left: 140px;
+} */
+
+/* Content Layout */
+
+.project-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Image */
+
+.project-image-wrapper {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.project-image-wrapper img {
+  width: 480px;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Content */
+
+.project-content {
+  width: 45%;
+}
+
+.project-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin-bottom: 25px;
+}
+
+.project-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: #1f1f1fe4;
+  margin-bottom: 30px;
+}
+
+.project-details {
+  margin-bottom: 15px;
+}
+
+.project-details p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 3%;
+  color: #1F1F1F;
+}
+
+.project-details span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 3%;
+  color: #1F1F1F;
+}
+
+/* Button */
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 162px;
+  height: 46px;
+  background: #d8853f;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: 0.4s ease;
+}
+
+.project-btn:hover {
+  background: #b96c2c;
+  transform: translateY(-2px);
+}
+
+/* =========================
+ LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+  .project-card {
+      padding: 55px;
+  }
+
+  .project-content-wrapper {
+      gap: 40px;
+  }
+
+}
+
+/* =========================
+ TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .our-project-section {
+      padding: 80px 0;
+  }
+
+  .project-card {
+      padding: 45px;
+  }
+
+  .project-content-wrapper {
+      flex-direction: column;
+  }
+
+  .project-image-wrapper,
+  .project-content {
+      width: 100%;
+  }
+
+  .project-title {
+      margin-top: 10px;
+  }
+
+  .project-design-box {
+      width: 220px;
+      height: 100px;
+      left: 40px;
+  }
+}
+
+/* =========================
+ MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .main-container {
+      width: 92%;
+  }
+
+  .our-project-section {
+      padding: 70px 0;
+  }
+
+  .our-project-heading-wrapper {
+      margin-bottom: 50px;
+  }
+
+
+  .project-card {
+      padding: 25px;
+  }
+
+  .project-content-wrapper {
+      gap: 30px;
+  }
+
+  .project-design-box {
+      width: 140px;
+      height: 70px;
+      border-width: 6px;
+      left: 20px;
+      top: 20px;
+  }
+
+  .project-title {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+  }
+
+  .project-description {
+      font-size: 14px;
+      line-height: 1.8;
+  }
+
+  .project-details p {
+      font-size: 14px;
+  }
+
+  .project-btn {
+      width: 150px;
+      height: 48px;
+      font-size: 12px;
+  }
+}
+
+/* =========================
+ SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+
+  .project-card {
+      padding: 20px;
+  }
+
+  .project-design-box {
+      display: none;
+  }
+
+  .project-description {
+      text-align: left;
+  }
+
+  .project-btn {
+      width: 100%;
+  }
+}
+
+
+
+/* =========================
+       TULA TESTIMONIAL SECTION
+    ========================= */
+    .tula-testimonial-section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(
+    90deg,
+    #8C5120 0%,
+    #75441B 50%,
+    #8C5120 100%
+);
+      padding: 60px 0 50px;
+    }
+    
+    .tula-testimonial-wrapper {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+    }
+    
+    .tula-testimonial-heading {
+      color: #ffffffd4;
+      margin-bottom: 40px;
+    }
+    
+    /* Track Area */
+    .tula-testimonial-slider-shell {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      cursor: grab;
+    }
+    
+    .tula-testimonial-slider-shell.tula-dragging-active {
+      cursor: grabbing;
+    }
+    
+    .tula-testimonial-track {
+      display: flex;
+      transition: transform 0.45s ease;
+      will-change: transform;
+      user-select: none;
+    }
+    
+    /* Card */
+    .tula-testimonial-slide {
+      flex: 0 0 calc(100% / 3);
+      padding: 0 10px;
+    }
+    
+    .tula-testimonial-card {
+      position: relative;
+      min-height: 190px;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 10px;
+      padding: 26px 30px 28px;
+      color: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(2px);
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .tula-testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+    
+    .tula-testimonial-client {
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16.8px;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    
+    .tula-testimonial-text {
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #ffffffca;
+      letter-spacing: 0%;
+      max-width: 95%;
+    }
+    
+    .tula-testimonial-quote {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-size: 60px;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.08);
+      font-weight: 700;
+      pointer-events: none;
+    }
+    
+    /* Arrows */
+    .tula-testimonial-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      z-index: 3;
+      backdrop-filter: blur(6px);
+    }
+    
+    .tula-testimonial-arrow:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-50%) scale(1.05);
+    }
+    
+    .tula-testimonial-arrow svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+    
+    .tula-testimonial-arrow-left {
+      left: -10px;
+    }
+    
+    .tula-testimonial-arrow-right {
+      right: -10px;
+    }
+    
+    /* Dots */
+    .tula-testimonial-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+    }
+    
+    .tula-testimonial-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    
+    .tula-testimonial-dot.active {
+      background: #fff;
+      transform: scale(1.15);
+    }
+    
+    /* =========================
+             RESPONSIVE
+          ========================= */
+    
+    @media (max-width: 1024px) {
+      .tula-testimonial-slide {
+        flex: 0 0 calc(100% / 2);
+      }
+    
+      .tula-testimonial-heading {
+        font-size: 17px;
+      }
+    
+      .tula-testimonial-card {
+        min-height: 205px;
+      }
+    
+      .tula-testimonial-arrow-left {
+        left: 6px;
+      }
+    
+      .tula-testimonial-arrow-right {
+        right: 6px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .tula-testimonial-section {
+        padding: 50px 0 42px;
+      }
+    
+      .tula-testimonial-wrapper {
+        padding: 0 16px;
+      }
+    
+      .tula-testimonial-slide {
+        flex: 0 0 100%;
+        padding: 0 6px;
+      }
+    
+      .tula-testimonial-heading {
+        font-size: 16px;
+        margin-bottom: 28px;
+      }
+    
+      .tula-testimonial-card {
+        min-height: auto;
+        padding: 24px 20px 24px;
+      }
+    
+      .tula-testimonial-client {
+        font-size: 12px;
+      }
+    
+      .tula-testimonial-text {
+        font-size: 12px;
+        line-height: 1.95;
+        max-width: 100%;
+      }
+    
+      .tula-testimonial-quote {
+        font-size: 46px;
+        top: 14px;
+        right: 16px;
+      }
+    
+      .tula-testimonial-arrow {
+        width: 40px;
+        height: 40px;
+      }
+    
+      .tula-testimonial-arrow-left {
+        left: 4px;
+      }
+    
+      .tula-testimonial-arrow-right {
+        right: 4px;
+      }
+    
+      .tula-testimonial-dots {
+        margin-top: 22px;
+      }
+    }
+    
+    /* Blogs Section */
+    
+    .blogs-section{
+        width: 100%;
+        padding: 80px 0;   
+    }
+    .blogs-section-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+    }
+    .blogs-title-wrapper{
+        width: 100%;
+        text-align: center;
+    }
+    .blogs-title {
+      color: #8C5120;
+    }
+    .blogs-content-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }   
+    .blogs-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 370px;
+        height: 442px;
+    }
+    .blogs-image{
+        width: 350px;
+        height: 210px;
+        border-radius: 10px;
+    }
+    .blogs-card-content-wrapper{
+        height: 100%;
+        width: 100%;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: ;
+        gap: 1rem;
+    }
+    .blogs-card-title{
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24.5px;
+        color: #181A20;
+    }
+    .blogs-para{
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24.7px;
+        color: #717171;
+    }
+    .blogs-btn{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 3px;
+        font-family: "Gilda Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 100%;
+        color: #623916;
+    }
+    .right-icons{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    @media (max-width: 992px){
+      .why-choose-us-section-wrapper{
+        flex-direction: column;
+        gap: 4rem;
+      }
+    }
+    @media (max-width: 576px){
+      .why-choose-us-section-wrapper{
+        flex-direction: column;
+        gap: 4rem;
+      }
+    }
+
+
+
+
+    @media (max-width: 768px) {
+      .hero-video{
+        height: 62vh;
+        object-fit: cover;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* =========================================================
+   RESPONSIVE MEDIA QUERIES
+========================================================= */
+
+/* =========================
+   LARGE TABLETS & SMALL LAPTOPS
+========================= */
+@media screen and (max-width: 1024px) {
+
+  .main-container {
+    width: 92%;
+  }
+
+  /* Hero */
+  .hero-video {
+    height: 75vh;
+    object-fit: cover;
+  }
+
+  /* Why Choose Us */
+  .why-choose-us-section-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+  }
+
+  .why-choose-us-card {
+    width: 45%;
+  }
+
+  /* About */
+  .tula-properties-about-content-wrapper {
+    padding: 0 2rem;
+  }
+
+  .tula-properties-about-floating-logo {
+    display: none;
+  }
+
+  /* Blogs */
+  .blogs-content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .blogs-cards {
+    width: 48%;
+  }
+
+  .blogs-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .main-container {
+    width: 94%;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .logo img {
+    width: 95px;
+    height: auto;
+  }
+
+  .book-btn {
+    font-size: 12px;
+    padding: 10px 18px;
+  }
+
+  /* Hero */
+  .hero-video {
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  /* Why Choose Us */
+  .why-choose-us-section {
+    padding: 60px 0;
+  }
+
+  .why-choose-us-section-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 0;
+  }
+
+  .why-choose-us-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .why-choose-us-card-para {
+    max-width: 100%;
+  }
+
+  /* About Section */
+  .tula-properties-about-section {
+    padding: 70px 0;
+  }
+
+  .tula-properties-about-title {
+    text-align: center;
+  }
+
+  .tula-properties-about-content-wrapper {
+    padding: 0;
+  }
+
+  .tula-properties-about-content-para {
+    text-align: left;
+  }
+
+  /* Soil Section */
+  .soil-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .soil-card {
+    height: 340px;
+  }
+
+  /* Projects */
+  .project-content-wrapper {
+    flex-direction: column;
+  }
+
+  .project-image-wrapper,
+  .project-content {
+    width: 100%;
+  }
+
+  .project-image-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card {
+    padding: 30px 20px;
+  }
+
+  .project-design-box {
+    display: none;
+  }
+
+  /* Testimonials */
+  .tula-testimonial-slide {
+    flex: 0 0 100%;
+  }
+
+  .tula-testimonial-arrow {
+    display: none;
+  }
+
+  /* Blogs */
+  .blogs-content-wrapper {
+    flex-direction: column;
+  }
+
+  .blogs-cards {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media screen and (max-width: 576px) {
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .hamburger {
+    transform: scale(0.9);
+  }
+
+  .book-btn {
+    padding: 9px 14px;
+    font-size: 11px;
+  }
+
+  /* Hero */
+  .hero-video {
+    height: 62vh;
+  }
+
+  /* About */
+  .tula-properties-about-subtitle {
+    letter-spacing: 3px;
+    font-size: 10px;
+  }
+
+  /* Soil */
+  .soil-heading p {
+    font-size: 18px;
+  }
+
+  .soil-heading h3 {
+    font-size: 34px;
+  }
+
+  .soil-title {
+    font-size: 28px;
+  }
+
+  .soil-description {
+    font-size: 13px;
+  }
+
+  /* Project */
+  .project-description {
+    text-align: left;
+  }
+
+  .project-btn {
+    width: 100%;
+  }
+
+  /* Testimonials */
+  .tula-testimonial-card {
+    padding: 20px;
+  }
+
+  .tula-testimonial-text {
+    line-height: 1.8;
+  }
+
+  /* Blogs */
+  .blogs-image {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .blogs-card-content-wrapper {
+    padding: 20px 10px;
+  }
+
+  /* Footer */
+  .footer-main {
+    padding: 0 20px;
+  }
+
+  .footer-contact input,
+  .footer-contact textarea {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+@media screen and (max-width: 400px) {
+
+  .logo img {
+    width: 80px;
+  }
+
+  .book-btn {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+
+  .hero-video {
+    height: 55vh;
+  }
+
+  .soil-card {
+    height: 300px;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .tula-testimonial-card {
+    padding: 18px;
+  }
+
+}
