@@ -25,12 +25,16 @@ Details: **`next-site/README.md`**.
 
 ## Deploy (e.g. Vercel)
 
-1. **Settings → General → Root Directory** = **`next-site`**. If this is wrong, **`next` never installs** and you get **`Cannot find module '.../next/dist/bin/next'`** or **`next: command not found`**.
+**Recommended:** **Settings → General → Root Directory** = **`next-site`**. Vercel then uses **`next-site/package.json`**, **`next-site/vercel.json`**, and installs into **`next-site/node_modules`** (where **`next`** lives).
+
+**If Root Directory is left as the repo root** (`.`), Vercel’s default **`npm install`** only sees the **root** `package.json`, which has **no** `next` / `react` dependencies — so **`next-site/node_modules/next`** is never created and the build fails with **`Cannot find module '.../next-site/node_modules/next/dist/bin/next'`**. The repo root **`vercel.json`** fixes that case by running **`npm install --prefix next-site`** and **`npm run build --prefix next-site`**, with **`outputDirectory`** set to **`next-site/out`** for static export.
+
+1. Prefer **Root Directory** = **`next-site`** (simpler; matches how you run **`npm install --prefix next-site`** locally).
 
 2. Commit and push **`next-site/package-lock.json`**.
 
-3. **`next-site/vercel.json`** sets **`buildCommand`** to **`npm install --no-audit --no-fund && npm run build`** so dependencies are installed again immediately before the Next build (covers skipped installs or bad cache). Clear **Build cache** in Vercel once after changing this.
+3. With Root = **`next-site`**, **`next-site/vercel.json`** runs **`npm install --no-audit --no-fund && npm run build`** before the Next build (helps if install was skipped or cache was bad). Clear **Build cache** once after changing deploy settings.
 
-4. Leave the Vercel dashboard **Build Command** empty so **`vercel.json`** is used.
+4. Leave dashboard **Install** / **Build** overrides empty unless you know you need them, so **`vercel.json`** applies.
 
-The **`package.json`** **`build`** script is **`next build`** again (normal after install).
+The **`next-site`** **`build`** script is **`next build`** (runs after dependencies exist).
