@@ -25,6 +25,12 @@ Details: **`next-site/README.md`**.
 
 ## Deploy (e.g. Vercel)
 
-Set the Vercel project **Root Directory** to **`next-site`**, then use the default **Install** (`npm install`) and **Build** (`npm run build` — runs `prepare:legacy` via `prebuild`).
+1. **Settings → General → Root Directory** = **`next-site`**. If this is wrong, **`next` never installs** and you get **`Cannot find module '.../next/dist/bin/next'`** or **`next: command not found`**.
 
-Commit **`next-site/package-lock.json`** so Vercel gets a deterministic install. The build script calls **`node ./node_modules/next/dist/bin/next build`** so the `next` CLI does not rely on `PATH` (avoids `next: command not found` on some CI images).
+2. Commit and push **`next-site/package-lock.json`**.
+
+3. **`next-site/vercel.json`** sets **`buildCommand`** to **`npm install --no-audit --no-fund && npm run build`** so dependencies are installed again immediately before the Next build (covers skipped installs or bad cache). Clear **Build cache** in Vercel once after changing this.
+
+4. Leave the Vercel dashboard **Build Command** empty so **`vercel.json`** is used.
+
+The **`package.json`** **`build`** script is **`next build`** again (normal after install).
