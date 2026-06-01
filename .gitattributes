@@ -1,0 +1,3 @@
+# Exclude legacy / generated HTML from Linguist “language” % (app is Next.js under next-site/src).
+next-site/legacy-html/** linguist-vendored
+next-site/content/bodies/** linguist-generated
