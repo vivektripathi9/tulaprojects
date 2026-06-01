@@ -30,7 +30,7 @@ npm run build
 npm run start
 ```
 
-With `output: "export"`, **`next start` is not supported** — `npm run start` serves the **`out/`** folder with a static server (same as production static hosting).
+With `output: "export"`, **`next start` is not supported** — `npm run start` serves the **`out/`** folder with a static server (same as production static hosting). **`next.config.ts`** uses **`trailingSlash: true`** so static export emits **`out/<route>/index.html`**, which matches extensionless URLs on hosts like Vercel.
 
 ### “404 | This page could not be found” on localhost
 

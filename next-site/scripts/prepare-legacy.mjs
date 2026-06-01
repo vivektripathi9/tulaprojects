@@ -111,6 +111,11 @@ function postProcessAppPath(p) {
   let out = decodeURIComponent(p);
   out = out.replace(/^\/t%26c(\/|$)/i, "/terms-and-conditions$1");
   out = out.replace(/^\/t&c(\/|$)/i, "/terms-and-conditions$1");
+  /**
+   * Legacy nav used `./leadership/...` inside nested sources (`blogs/*.html`, `contact/index.html`, …).
+   * Resolved against that folder it becomes `/blogs/leadership` — wrong. Canonical route is `/leadership`.
+   */
+  out = out.replace(/^\/[^/]+\/leadership$/i, "/leadership");
   if (out.length > 1) out = out.replace(/\/+$/, "");
   return out || "/";
 }

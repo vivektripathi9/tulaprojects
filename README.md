@@ -38,3 +38,5 @@ Details: **`next-site/README.md`**.
 4. Leave dashboard **Install** / **Build** overrides empty unless you know you need them, so **`vercel.json`** applies.
 
 The **`next-site`** **`build`** script is **`next build`** (runs after dependencies exist).
+
+**Static export + clean URLs:** With default `trailingSlash: false`, Next emits **`contact.html`**, not a folder. Vercel’s static CDN does not serve **`/contact`** from **`contact.html`**, so only **`/`** (`index.html`) worked and other paths looked like **`NOT_FOUND`**. This repo sets **`trailingSlash: true`** in **`next-site/next.config.ts`** (emits **`contact/index.html`**) and **`cleanUrls: true`** in **`vercel.json`** so extensionless routes resolve on Vercel.

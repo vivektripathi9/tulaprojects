@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  /** Required for static hosts (including Vercel) so `/contact` resolves to HTML instead of bare `contact.html` URLs only. */
+  trailingSlash: true,
   reactStrictMode: false,
   images: {
     unoptimized: true,
