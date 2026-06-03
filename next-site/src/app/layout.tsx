@@ -1,6 +1,14 @@
+import type { Viewport } from "next";
 import "./globals.css";
 
 /** Favicon: use `src/app/favicon.ico` only. Do not add `public/favicon.ico` — Next reports a route conflict and dev manifests can corrupt. */
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#f8ead6",
+};
 
 export default function RootLayout({
   children,

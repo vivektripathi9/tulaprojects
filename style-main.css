@@ -5,17 +5,29 @@
     padding: 0;
     box-sizing: border-box;
   }
+  /* min-height (not height: 100%) so the page grows with content — otherwise
+     the area past the first viewport paints the browser default (white) on mobile */
+  html {
+    min-height: 100%;
+    min-height: 100dvh;
+  }
   body,
   html {
-    height: 100%;
     width: 100%;
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
     /* Match inner pages (e.g. contact) — warm cream, not flat white */
     background: linear-gradient(#f8ead6, #f9e3c6);
   }
+  body {
+    min-height: 100%;
+    min-height: 100dvh;
+    /* Home indicator / safe area (use with viewport-fit=cover on the host page) */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
   main {
-    height: 100%;
+    min-height: 100%;
+    min-height: 100dvh;
     width: 100%;
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
