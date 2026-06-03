@@ -9,6 +9,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Reduce rubber-band overscroll flashes at top/bottom on mobile Safari */
+@media (max-width: 768px) {
+  html {
+    overscroll-behavior-y: contain;
+  }
+}
+
 .legacy-html-root {
   /* Isolate layout from the shell; avoids extra style recalc leaking upward */
   isolation: isolate;

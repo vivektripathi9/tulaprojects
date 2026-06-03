@@ -47,6 +47,23 @@
     transition: transform 0.35s ease;
 }
 
+/* Mobile: white fog repaints badly over video (fixed bar + scroll): looks like a flashing white band.
+   Use warm cream tints aligned with the page shell instead of pure white. */
+@media screen and (max-width: 768px) {
+    .navbar {
+        background: linear-gradient(
+            to bottom,
+            rgba(248, 234, 214, 0.94) 0%,
+            rgba(249, 227, 198, 0.72) 38%,
+            rgba(249, 227, 198, 0.28) 72%,
+            rgba(249, 227, 198, 0) 100%
+        );
+        /* Promote own compositor layer to reduce iOS Safari flicker under the fixed bar */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
 /* ─── HAMBURGER ─── */
 .hamburger {
     display: flex;
