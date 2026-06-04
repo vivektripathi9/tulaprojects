@@ -64,6 +64,65 @@
     }
 }
 
+/* Left cluster: hamburger + close — must stay one row (mobile + cached CSS) */
+.navbar-menu-controls {
+    position: relative;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 28px !important;
+    flex-shrink: 0;
+}
+
+/* Drawer open: bar above panel so controls stay visible */
+body.nav-drawer-open .navbar,
+body:has(#menuPanel.open) .navbar {
+    z-index: 10060;
+}
+
+/* Hamburger + "Menu" label — label only after drawer opens (hamburger click) */
+.navbar-menu-trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    transition: gap 0.2s ease;
+}
+
+body.nav-drawer-open .navbar-menu-trigger,
+body:has(#menuPanel.open) .navbar-menu-trigger {
+    gap: 6px;
+}
+
+.navbar-menu-label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #c8892e;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease, max-height 0.2s ease, line-height 0.2s ease;
+}
+
+body.nav-drawer-open .navbar-menu-label,
+body:has(#menuPanel.open) .navbar-menu-label {
+    opacity: 1;
+    visibility: visible;
+    max-height: 2rem;
+    line-height: 1;
+}
+
 /* ─── HAMBURGER ─── */
 .hamburger {
     display: flex;
@@ -78,6 +137,49 @@
     height: 2px;
     background: #c8892e;
     transition: all 0.3s ease;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #c8892e;
+}
+
+.navbar-menu-controls .close-btn {
+    box-sizing: border-box;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    border: none;
+    transition: opacity 0.2s ease, max-width 0.2s ease, visibility 0.2s ease;
+}
+
+body.nav-drawer-open .navbar-menu-controls .close-btn,
+body:has(#menuPanel.open) .navbar-menu-controls .close-btn {
+    max-width: 48px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding: 6px;
+    overflow: visible;
 }
 
 /* ─── LOGO ─── */
@@ -152,6 +254,7 @@
 }
 
 /* ─── MENU PANEL (left 20%) ─── */
+/* Drawer stacks above navbar (see .navbar z-index) */
 .menu-panel {
     position: fixed;
     top: 0;
@@ -169,33 +272,8 @@
 }
 .menu-panel.open {
     transform: translateX(0);
-}
-
-.menu-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-.menu-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: #888;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 22px;
-    color: #333;
-    cursor: pointer;
-    line-height: 1;
-    padding: 4px;
-    transition: color 0.2s;
-}
-.close-btn:hover {
-    color: #c8892e;
+    /* Clear fixed navbar (~90px) so first links aren’t under the bar / controls */
+    padding-top: 104px;
 }
 
 /* ─── MENU NAV LINKS ─── */
@@ -1041,12 +1119,6 @@
     .footer-copyright p span {
         color: var(--white);
         font-weight: 500;
-    }
-
-    .footer-partner {
-        color: var(--white-60);
-        text-decoration: underline;
-        font-weight: 600;
     }
     /* ─── RESPONSIVE ─────────────────────────────────────── */
 

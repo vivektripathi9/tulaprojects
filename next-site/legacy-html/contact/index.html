@@ -23,10 +23,16 @@
     <main>
       <!-- ─── NAVBAR ─── -->
       <nav class="navbar">
-        <div class="hamburger" id="hamburgerBtn">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="navbar-menu-controls">
+          <div class="navbar-menu-trigger">
+            <div class="hamburger" id="hamburgerBtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span class="navbar-menu-label">Menu</span>
+          </div>
+          <button type="button" class="close-btn" id="closeBtn" aria-label="Close menu">&#x2715;</button>
         </div>
 
         <a href="../index.html" class="logo">
@@ -41,12 +47,7 @@
 
       <!-- ─── LEFT MENU PANEL ─── -->
       <div class="menu-panel" id="menuPanel">
-        <div class="menu-header">
-          <span class="menu-label">Menu</span>
-          <button class="close-btn" id="closeBtn">&#x2715;</button>
-        </div>
-
-        <ul class="menu-nav">
+          <ul class="menu-nav">
           <!-- WHO WE ARE -->
           <li>
             <div class="nav-item" id="whoWeAre">
@@ -441,8 +442,7 @@
         <!-- ── COPYRIGHT ─────────────────────────── -->
         <div class="footer-copyright">
           <p>© 2026
-              <span>Tula Properties</span>. All Rights Reserved. Digital Partner
-              <a href="www.pinakkaa.com" class="footer-partner">PINAKKAA</a>
+              <span>Tula Properties</span>. All Rights Reserved.
           </p>
         </div>
       </footer>

@@ -11,20 +11,57 @@ const projectsMenu = document.getElementById("projectsMenu");
 const subPanel = document.getElementById("subPanel");
 const projectsSubPanel = document.getElementById("projectsSubPanel");
 
+/** Must match `.menu-panel { transition: transform ... }` (+ small buffer). */
+const DRAWER_TRANSITION_MS = 450;
+
+function removeDrawerChrome() {
+  document.body.classList.remove("nav-drawer-open");
+}
+
 // OPEN MENU
 function openMenu() {
+  if (!menuPanel) return;
+  if (menuPanel.classList.contains("open")) {
+    closeAll();
+    return;
+  }
   menuPanel.classList.add("open");
   overlay.classList.add("active");
+  document.body.classList.add("nav-drawer-open");
 }
 
 // CLOSE EVERYTHING
 function closeAll() {
-  menuPanel.classList.remove("open");
+  if (!menuPanel) return;
 
+  const wasOpen = menuPanel.classList.contains("open");
+
+  menuPanel.classList.remove("open");
   subPanel.classList.remove("open");
   projectsSubPanel.classList.remove("open");
-
   overlay.classList.remove("active");
+
+  if (!wasOpen) {
+    removeDrawerChrome();
+    return;
+  }
+
+  let settled = false;
+  const finish = () => {
+    if (settled) return;
+    settled = true;
+    menuPanel.removeEventListener("transitionend", onTransitionEnd);
+    removeDrawerChrome();
+  };
+
+  const onTransitionEnd = (ev) => {
+    if (ev.target !== menuPanel) return;
+    if (ev.propertyName !== "transform") return;
+    finish();
+  };
+
+  menuPanel.addEventListener("transitionend", onTransitionEnd);
+  window.setTimeout(finish, DRAWER_TRANSITION_MS);
 }
 
 // EVENTS
