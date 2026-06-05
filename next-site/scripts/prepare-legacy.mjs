@@ -57,7 +57,7 @@ const PAGES = [
   {
     rel: "channel-partners/index.html",
     slug: "channel-partners",
-    scripts: ["navbar.js", "footer-email.js"],
+    scripts: ["navbar.js", "footer-email.js", "channel-partner-inline.js"],
   },
   { rel: "career/index.html", slug: "career", scripts: ["navbar.js", "footer-email.js", "career-inline.js"] },
   {
@@ -264,6 +264,7 @@ function copyLegacyJs() {
     ["script.js", "script.js"],
     ["footer-email.js", "footer-email.js"],
     ["career-inline.js", "career-inline.js"],
+    ["channel-partner-inline.js", "channel-partner-inline.js"],
     ["contact-inline.js", "contact-inline.js"],
     [path.join("Projects", "script.js"), "projects-script.js"],
   ];

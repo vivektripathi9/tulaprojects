@@ -485,65 +485,7 @@
       </footer>
     </main>
 
-    <script>
-        document.getElementById("registerForm").addEventListener("submit", async function (e) {
-            e.preventDefault();
-    
-            const submitBtn = document.getElementById("regSubmitBtn");
-            const successMsg = document.getElementById("regSuccess");
-            const errorMsg = document.getElementById("regError");
-    
-            successMsg.style.display = "none";
-            errorMsg.style.display = "none";
-    
-            const privacy = document.getElementById("privacy");
-            if (!privacy.checked) {
-                errorMsg.textContent = "❌ Please accept the Privacy Policy to continue.";
-                errorMsg.style.display = "block";
-                return;
-            }
-    
-            const payload = {
-                company: document.getElementById("reg-company").value.trim(),
-                off_email: document.getElementById("reg-off-email").value.trim(),
-                address: document.getElementById("reg-address").value.trim(),
-                owner: document.getElementById("reg-owner").value.trim(),
-                phone: document.getElementById("reg-phone").value.trim(),
-                office: document.getElementById("reg-office").value.trim(),
-                website: document.getElementById("reg-website").value.trim(),
-                rera: document.getElementById("reg-rera").value.trim(),
-                rera_expiry: document.getElementById("reg-rera-expiry").value.trim(),
-                pan: document.getElementById("reg-pan").value.trim(),
-                gst: document.getElementById("reg-gst").value.trim()
-            };
-    
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = "Submitting...";
-    
-            try {
-                const response = await fetch("https://emailjsfuntions-428145106157.asia-south1.run.app/tula-channel-partner", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(payload)
-                });
-    
-                const result = await response.json();
-    
-                if (response.ok && result.success) {
-                    successMsg.style.display = "block";
-                    document.getElementById("registerForm").reset();
-                } else {
-                    errorMsg.style.display = "block";
-                }
-            } catch (err) {
-                console.error(err);
-                errorMsg.style.display = "block";
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = "Submit";
-            }
-        });
-    </script>
+    <script src="../channel-partner-inline.js"></script>
 
     <div class="apartment-modal-overlay" id="apartmentModal">
         <div class="apartment-modal-box">

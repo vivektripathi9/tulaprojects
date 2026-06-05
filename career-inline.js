@@ -3,6 +3,14 @@
  * Career page logic (was inline <script> in career/index.html).
  * Loaded after navbar.js + footer-email.js by Next prepare config.
  */
+const fileToBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+
 async function submitCareerForm(payload, submitBtn, successMsg, errorMsg, formId) {
   submitBtn.disabled = true;
   submitBtn.innerHTML = "Submitting...";
@@ -57,6 +65,12 @@ if (joinTeamForm) {
       expected_ctc: document.getElementById("expectedCTC").value.trim(),
     };
 
+    const resumeFile = document.getElementById("resumeUpload").files[0];
+    if (resumeFile) {
+      payload.resume_name = resumeFile.name;
+      payload.resume_base64 = await fileToBase64(resumeFile);
+    }
+
     await submitCareerForm(
       payload,
       document.getElementById("jtSubmitBtn"),
@@ -85,6 +99,12 @@ if (careerPopupForm) {
       current_ctc: document.getElementById("popupCurrentCTC").value.trim(),
       expected_ctc: document.getElementById("popupExpectedCTC").value.trim(),
     };
+
+    const resumeFile = document.getElementById("popupResumeUpload").files[0];
+    if (resumeFile) {
+      payload.resume_name = resumeFile.name;
+      payload.resume_base64 = await fileToBase64(resumeFile);
+    }
 
     await submitCareerForm(
       payload,
@@ -156,6 +176,18 @@ if (resumeUpload && resumeText) {
       resumeText.textContent = this.files[0].name;
     } else {
       resumeText.textContent = "Upload Resume";
+    }
+  });
+}
+
+const popupResumeUpload = document.getElementById("popupResumeUpload");
+const popupResumeText = document.getElementById("popupResumeText");
+if (popupResumeUpload && popupResumeText) {
+  popupResumeUpload.addEventListener("change", function () {
+    if (this.files.length > 0) {
+      popupResumeText.textContent = this.files[0].name;
+    } else {
+      popupResumeText.textContent = "Upload Resume";
     }
   });
 }

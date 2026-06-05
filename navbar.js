@@ -242,47 +242,16 @@ document
     }
 
     try {
-      const urlParams = new URLSearchParams(window.location.search);
-      const leadPayload = {
-        "Name": payload.name,
-        "Email": payload.email,
-        "Mobile": payload.mobile,
-        "Site": "Tula Properties",
-        "Source": "Website",
-        "Subsource": "Landing Page",
-        "TypeOfUnit": "",
-        "Keyword": "",
-        "MatchType": "",
-        "Creative": "",
-        "Placement": "",
-        "Model": "",
-        "CampaignType": "",
-        "UTM_Source": urlParams.get('utm_source') || "",
-        "UTM_Medium": urlParams.get('utm_medium') || "",
-        "GCLID": urlParams.get('gclid') || "",
-        "Remark": "Project: " + payload.project,
-        "Text1": "",
-        "Text2": "",
-        "Text3": "",
-        "Text4": "",
-        "Text5": "",
-        "Portal_ID": "",
-        "Enquiry_Id": "",
-        "Adset_Name": "",
-        "Campaign_Name": ""
-      };
-
-      const response = await fetch("https://tulaproperties.in/HighriseLeadsIntegrationAPi/OnlinEnquiry/Enquiry_InsertAPI", {
+      const response = await fetch("https://emailjsfuntions-428145106157.asia-south1.run.app/tula-project-enquiry", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Accept": "text/plain"
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(leadPayload)
+        body: JSON.stringify(payload)
       });
 
-      const responseText = await response.text();
-      console.log("Lead API Response:", responseText);
+      const result = await response.json();
+      console.log("Lead API Response:", result);
 
       if (response.ok) {
         successMsg.style.display = "block";
@@ -335,47 +304,16 @@ document
     }
 
     try {
-      const urlParams = new URLSearchParams(window.location.search);
-      const leadPayload = {
-        "Name": payload.name,
-        "Email": payload.email,
-        "Mobile": payload.mobile,
-        "Site": "Tula Properties",
-        "Source": "Website",
-        "Subsource": "Landing Page",
-        "TypeOfUnit": "",
-        "Keyword": "",
-        "MatchType": "",
-        "Creative": "",
-        "Placement": "",
-        "Model": "",
-        "CampaignType": "",
-        "UTM_Source": urlParams.get('utm_source') || "",
-        "UTM_Medium": urlParams.get('utm_medium') || "",
-        "GCLID": urlParams.get('gclid') || "",
-        "Remark": "",
-        "Text1": "",
-        "Text2": "",
-        "Text3": "",
-        "Text4": "",
-        "Text5": "",
-        "Portal_ID": "",
-        "Enquiry_Id": "",
-        "Adset_Name": "",
-        "Campaign_Name": ""
-      };
-
-      const response = await fetch("https://tulaproperties.in/HighriseLeadsIntegrationAPi/OnlinEnquiry/Enquiry_InsertAPI", {
+      const response = await fetch("https://emailjsfuntions-428145106157.asia-south1.run.app/tula-apartment-interest", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Accept": "text/plain"
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(leadPayload)
+        body: JSON.stringify(payload)
       });
 
-      const responseText = await response.text();
-      console.log("Lead API Response:", responseText);
+      const result = await response.json();
+      console.log("Lead API Response:", result);
 
       if (response.ok) {
         successMsg.style.display = "block";

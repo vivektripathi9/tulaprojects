@@ -33,50 +33,27 @@ async function sendMessage() {
   }
 
   try {
-    const urlParams = new URLSearchParams(window.location.search);
-    const leadPayload = {
-      Name: name,
-      Email: email,
-      Mobile: phone,
-      Site: "Tula Properties",
-      Source: "Website",
-      Subsource: "Contact Page",
-      TypeOfUnit: "",
-      Keyword: "",
-      MatchType: "",
-      Creative: "",
-      Placement: "",
-      Model: "",
-      CampaignType: "",
-      UTM_Source: urlParams.get("utm_source") || "",
-      UTM_Medium: urlParams.get("utm_medium") || "",
-      GCLID: urlParams.get("gclid") || "",
-      Remark: message,
-      Text1: "",
-      Text2: "",
-      Text3: "",
-      Text4: "",
-      Text5: "",
-      Portal_ID: "",
-      Enquiry_Id: "",
-      Adset_Name: "",
-      Campaign_Name: "",
+    const payload = {
+      name: name,
+      country_code: "+91",
+      phone: phone,
+      email: email,
+      message: message
     };
 
     const response = await fetch(
-      "https://tulaproperties.in/HighriseLeadsIntegrationAPi/OnlinEnquiry/Enquiry_InsertAPI",
+      "https://emailjsfuntions-428145106157.asia-south1.run.app/tula-footer-form",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "text/plain",
         },
-        body: JSON.stringify(leadPayload),
+        body: JSON.stringify(payload),
       },
     );
 
-    const responseText = await response.text();
-    console.log("Lead API Response:", responseText);
+    const result = await response.json();
+    console.log("Lead API Response:", result);
 
     if (response.ok) {
       toast.classList.add("show");
