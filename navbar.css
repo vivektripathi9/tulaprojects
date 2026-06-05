@@ -76,10 +76,21 @@
     flex-shrink: 0;
 }
 
-/* Drawer open: bar above panel so controls stay visible */
+/* Drawer open: bar above panel so controls stay visible.
+   Let clicks reach the drawer under the bar — navbar would otherwise steal hits (z-index). */
 body.nav-drawer-open .navbar,
 body:has(#menuPanel.open) .navbar {
     z-index: 10060;
+    pointer-events: none;
+}
+
+body.nav-drawer-open .navbar .navbar-menu-controls,
+body.nav-drawer-open .navbar .logo,
+body.nav-drawer-open .navbar .book-btn,
+body:has(#menuPanel.open) .navbar .navbar-menu-controls,
+body:has(#menuPanel.open) .navbar .logo,
+body:has(#menuPanel.open) .navbar .book-btn {
+    pointer-events: auto;
 }
 
 /* Hamburger + "Menu" label — label only after drawer opens (hamburger click) */
